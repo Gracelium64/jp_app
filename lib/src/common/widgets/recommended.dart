@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/features/navigation/presentation/detail_screen.dart';
-import 'package:jp_app/src/features/navigation/presentation/menu_card.dart';
+import 'package:jp_app/src/features/navigation/domain/detail_card.dart';
+import 'package:jp_app/src/features/navigation/domain/menu_card.dart';
 
 class Recommended extends StatelessWidget {
   const Recommended({super.key});
@@ -25,7 +25,7 @@ class Recommended extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return DetailScreen(menuItem: itemsData[index]);
+                          return DetailCard(menuItem: itemsData[index]);
                         },
                       ),
                     );

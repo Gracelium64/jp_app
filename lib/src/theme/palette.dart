@@ -12,6 +12,7 @@ static final Color textWhite = const Color.fromARGB(255, 255, 255, 255);
 static final Color textGrey = const Color.fromARGB(255, 175, 167, 217);
 static final Color textShadow = const Color.fromARGB(180, 80, 80, 80);
 static final Color boxBg = const Color.fromARGB(12, 50, 50, 50);
+static final Color boxBgAlpha = const Color.fromARGB(255, 54, 44, 44);
 static final Color boxBorder = const Color.fromARGB(100, 155, 160, 155);
 static final Color black = const Color.fromARGB(255, 0, 0, 0);
 static final Color buttonGradientOrange = const Color.fromARGB(255, 246, 158, 163);
