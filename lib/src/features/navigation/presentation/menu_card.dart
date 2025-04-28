@@ -1,12 +1,18 @@
 import 'dart:ui';
-
+import 'package:jp_app/src/common/items_data.dart';
 import 'package:flutter/material.dart';
+import 'package:jp_app/src/theme/palette.dart';
 
-class MenuCard extends StatelessWidget {
-  const MenuCard({
-    super.key,
-  });
+class MenuCard extends StatefulWidget {
+  final MenuItem menuItem;
 
+  const MenuCard({super.key, required this.menuItem});
+
+  @override
+  State<MenuCard> createState() => _MenuCardState();
+}
+
+class _MenuCardState extends State<MenuCard> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -22,17 +28,16 @@ class MenuCard extends StatelessWidget {
               end: Alignment.topLeft,
               stops: [0.1, 0.5, 1],
               colors: [
-                Color.fromARGB(255, 129, 81, 231),
-                Color.fromARGB(155, 133, 129, 244),
-                Color.fromARGB(18, 255, 255, 255),
+                Palette.menuCardGradientPurple,
+                Palette.menuCardGradientPurpleGrey,
+                Palette.menuCardGradientGrey,
               ],
-              
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32),
               side: BorderSide(
                 width: 0.5,
-                color: Color.fromARGB(255, 151, 151, 158),
+                color: Palette.menuCardBorder,
               ),
             ),
           ),
@@ -40,46 +45,51 @@ class MenuCard extends StatelessWidget {
             padding: const EdgeInsets.only(top: 24),
             child: Column(
               children: [
-                Container(height: 155, width: 155, color: Colors.blueGrey),
+                Container(
+                  height: 155, 
+                  width: 155, 
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(widget.menuItem.imgPath))
+                  )
+                ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
-                        'title',
+                        widget.menuItem.itemTitle,
                         style: TextStyle(
                           fontFamily: 'SFPro',
                           fontWeight: FontWeight.bold,
                           fontSize: 13,
-                          color: Colors.white,
+                          color: Palette.textWhite,
                         ),
                       ),
-        
+
                       Text(
-                        'subtitle',
+                        widget.menuItem.itemSubTitle,
                         style: TextStyle(
                           fontFamily: 'SFPrp',
                           fontSize: 11,
-                          color: Color.fromARGB(255, 175, 167, 217),
+                          color: Palette.textGrey,
                         ),
                       ),
-        
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('%'),
-                          Text('price'),
+                          Text('${widget.menuItem.itemPriceL}'),
                           Spacer(),
                           Text('#'),
-                          Text('likes'),
+                          Text('${widget.menuItem.itemLikes}'),
                         ],
-                      )
+                      ),
                     ],
-                    
                   ),
-                
-                )
+                ),
               ],
             ),
           ),

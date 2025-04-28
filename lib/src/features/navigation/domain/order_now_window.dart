@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
+import 'package:jp_app/src/theme/palette.dart';
 
 class OrderNowWindow extends StatefulWidget {
   const OrderNowWindow({super.key});
@@ -24,13 +25,10 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
               clipBehavior: Clip.none,
               padding: const EdgeInsets.fromLTRB(5, 20, 5, 0),
               decoration: ShapeDecoration(
-                color: const Color.fromARGB(12, 50, 50, 50),
+                color: Palette.boxBg,
 
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    width: 0.5,
-                    color: Color.fromARGB(100, 155, 160, 155),
-                  ),
+                  side: BorderSide(width: 0.5, color: Palette.boxBorder),
                   borderRadius: BorderRadius.circular(35),
                 ),
               ),
@@ -40,7 +38,7 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                     'Feeling Snackish Today?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Palette.textWhite,
                       fontSize: 24,
                       fontFamily: 'InterBlack',
                       fontWeight: FontWeight.w900,
@@ -51,7 +49,7 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                         Shadow(
                           offset: Offset(0, 30),
                           blurRadius: 180,
-                          color: Color(0xFF000000),
+                          color: Palette.black,
                         ),
                       ],
                     ),
@@ -62,7 +60,7 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                       "Explore Angi's most popular snack selection and get instantly happy.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0x99EBEBF5),
+                        color: Palette.textGrey,
                         fontFamily: 'SFPro',
                         fontWeight: FontWeight.w400,
                         height: 1.3,
@@ -91,8 +89,8 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                                 center: Alignment.bottomRight,
                                 radius: 5,
                                 colors: [
-                                  Color.fromARGB(255, 246, 158, 163),
-                                  Color.fromARGB(255, 233, 122, 196),
+                                  Palette.buttonGradientOrange,
+                                  Palette.buttonGradientPink,
                                 ],
                               ),
                               shape: RoundedRectangleBorder(
@@ -104,30 +102,32 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
 
                         Container(
                           decoration: ShapeDecoration(
-                            shadows: [
-                              BoxShadow(
-                                blurStyle: BlurStyle.inner,
-                                offset: Offset(0, 2.5),
-                                blurRadius: 60,
-                                color: Color.fromARGB(120, 147, 117, 182),
-                              ),
-                            ],
-                            gradient: LinearGradient(
-                              begin: Alignment(0.5, 0),
-                              end: Alignment(0.5, 1),
-                              colors: [
-                                Color.fromARGB(20, 254, 200, 241),
-                                Color.fromARGB(20, 255, 255, 255),
+                            // shadows: [
+                            //   BoxShadow(
+                            //     blurStyle: BlurStyle.inner,
+                            //     offset: Offset(0, 2.5),
+                            //     blurRadius: 60,
+                            //     color: Color.fromARGB(120, 147, 117, 182),
+                            //   ),
+                            // ],
+                            // gradient: LinearGradient(
+                            //   begin: Alignment(0.5, 0),
+                            //   end: Alignment(0.5, 1),
+                            //   colors: [
+                            //     Color.fromARGB(20, 254, 200, 241),
+                            //     Color.fromARGB(20, 255, 255, 255),
 
-                                //A28
-                              ],
-                            ),
+                            //     //A28
+                            //   ],
+                            // ),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                             ),
                           ),
                           height: 50,
                           width: 230,
+
+                          //////
                           child: TextButton(
                             onPressed: () {
                               setState(() {
@@ -141,7 +141,7 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                             child: Text(
                               'Order Now',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Palette.textWhite,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: 18,
@@ -150,7 +150,7 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                                   Shadow(
                                     offset: Offset(0, 8),
                                     blurRadius: 60,
-                                    color: Color.fromARGB(180, 80, 80, 80),
+                                    color: Palette.textShadow,
                                   ),
                                 ],
                               ),
