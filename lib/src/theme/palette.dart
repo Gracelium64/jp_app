@@ -17,9 +17,7 @@ static final Color boxBorder = const Color.fromARGB(100, 155, 160, 155);
 static final Color black = const Color.fromARGB(255, 0, 0, 0);
 static final Color buttonGradientOrange = const Color.fromARGB(255, 246, 158, 163);
 static final Color buttonGradientPink = const Color.fromARGB(255, 233, 122, 196);
-
-
+static final Color starColor = const Color.fromARGB(255, 235, 120, 172);
 
 
 }
-

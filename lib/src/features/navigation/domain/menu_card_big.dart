@@ -1,11 +1,25 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
+// import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/common/widgets/app_bg.dart';
+import 'package:jp_app/src/common/widgets/star_rating.dart';
+import 'package:jp_app/src/theme/palette.dart';
+import 'package:jp_app/src/theme/symbols_palette.dart';
+// import 'package:jp_app/src/common/widgets/selection.dart';
 
-class MenuCardBig extends StatelessWidget {
-  const MenuCardBig({super.key, required MenuItem menuItem});
+class MenuCardBig extends StatefulWidget {
+  // final MenuCardBig menuItem;
 
+  const MenuCardBig({
+    super.key,
+    // required MenuItem menuItem,
+  });
+
+  @override
+  State<MenuCardBig> createState() => _MenuCardBigState();
+}
+
+class _MenuCardBigState extends State<MenuCardBig> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -28,26 +42,116 @@ class MenuCardBig extends StatelessWidget {
                       child: Stack(
                         children: [
                           SizedBox(
-                            width: 353,
-                            height: 260,
+                            width: 400,
+                            height: 238,
                             child: Image.asset(
                               'assets/details/Vector.png',
                               color: Color.fromARGB(255, 49, 46, 37),
                             ),
                           ),
-                          Column(children: [
-                            Text('dfsgd'),
-                            Text('descrtoproon'),
-                            Text('price'),
-                            TextButton(onPressed: () {}, child: Container(height: 50, width: 50, color: Colors.green,)),
-                            Row(
-                              children: [
-                                Image.asset('assets/graphics/burger.png')
-                              ],
-                            )
-
-                           ]
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(0, 26, 12, 0),
+                                child: SizedBox(
+                                    width: 220,
+                                    height: 220,
+                                    child: Image.asset(
+                                        'assets/graphics/burger.png')),
+                              )
+                            ],
                           ),
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(32, 16, 32, 0),
+                                  child: Row(
+                                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Expanded(
+                                        flex: 7,
+                                        child: Text(
+                                          "Angi's Yummy Burger",
+                                          style: TextStyle(
+                                            color: Palette.textWhite,
+                                            fontFamily: 'SFPro',
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 17,
+                                            letterSpacing: 0.3,
+                                            shadows: [
+                                              Shadow(
+                                                  offset: Offset(0, 10),
+                                                  blurRadius: 60,
+                                                  color: Palette.textShadow)
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Palette.starColor,
+                                          ),
+                                          Text('4.8'),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(31, 0, 170, 0),
+                                  child: Text(
+                                    'Delish vegan burger that tastes like heaven',
+                                    style: TextStyle(
+                                      color: Palette.textWhite,
+                                      fontFamily: 'SFPro',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 13,
+                                      letterSpacing: 0.3,
+                                    ),
+                                  ),
+                                ),
+                                // Text(widget.menuItem.itemPriceL),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(32, 2, 0, 0),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        SymbolsPalette.miaoCoin,
+                                        style: TextStyle(
+                                            color: Palette.textWhite,
+                                            fontFamily: 'SFPro',
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 20),
+                                      ),
+                                      Text(
+                                        '  13.99',
+                                        style: TextStyle(
+                                          color: Palette.textWhite,
+                                          fontFamily: 'SFPro',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                          letterSpacing: 0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                TextButton(
+                                    onPressed: () {},
+                                    child: Container(
+                                      height: 50,
+                                      width: 50,
+                                      color: Colors.green,
+                                    )),
+                              ]),
                         ],
                       ),
                     ),

@@ -10,6 +10,8 @@ abstract class AppTheme {
     // )
   );
 
+  
+
   static final darkTheme = ThemeData.from(
     colorScheme: ColorScheme.dark()
   );

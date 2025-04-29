@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/features/navigation/domain/menu_card.dart';
+import 'package:jp_app/src/features/navigation/domain/menu_card_big.dart';
 
-class Recommended extends StatelessWidget {
-  const Recommended({super.key});
+class Selection extends StatelessWidget {
+  const Selection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
       child: SizedBox(
-        height: 265,
+        height: 238,
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
@@ -21,7 +21,7 @@ class Recommended extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
                   onTap: () {},
-                  child: MenuCard(menuItem: itemsData[index]),
+                  child: MenuCardBig(),
                 ),
               );
             }
