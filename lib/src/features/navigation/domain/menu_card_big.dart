@@ -156,20 +156,24 @@ class _MenuCardBigState extends State<MenuCardBig> {
                                       );
                                     });
                                   },
-                                  child: SizedBox(
-                                    height: 279,
-                                    width: 120,
-                                    child: GlowingTextBtn(
-                                      btnText: 'Add to order',
-                                      colorOutlineLight:
-                                          Palette.button2OutlineLight,
-                                      colorOutlineDark:
-                                          Palette.button2OutlineDark,
-                                      colorGradientLight:
-                                          Palette.button2GradientPurple,
-                                      colorGradientDark:
-                                          Palette.button2GradientPink,
-                                      fontSizeData: 13,
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(12, 24, 0, 0),
+                                    child: SizedBox(
+                                      height: 279,
+                                      width: 120,
+                                      child: GlowingTextBtn(
+                                        btnText: 'Add to order',
+                                        colorOutlineLight:
+                                            Palette.button2OutlineLight,
+                                        colorOutlineDark:
+                                            Palette.button2OutlineDark,
+                                        colorGradientLight:
+                                            Palette.button2GradientPurple,
+                                        colorGradientDark:
+                                            Palette.button2GradientPink,
+                                        fontSizeData: 13,
+                                      ),
                                     ),
                                   ),
                                 )
