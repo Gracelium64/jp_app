@@ -2,7 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 // import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/common/widgets/app_bg.dart';
+import 'package:jp_app/src/common/widgets/glowing_text_btn.dart';
 import 'package:jp_app/src/common/widgets/star_rating.dart';
+import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
 import 'package:jp_app/src/theme/palette.dart';
 import 'package:jp_app/src/theme/symbols_palette.dart';
 // import 'package:jp_app/src/common/widgets/selection.dart';
@@ -117,7 +119,6 @@ class _MenuCardBigState extends State<MenuCardBig> {
                                     ),
                                   ),
                                 ),
-                                // Text(widget.menuItem.itemPriceL),
                                 Padding(
                                   padding:
                                       const EdgeInsets.fromLTRB(32, 2, 0, 0),
@@ -145,12 +146,33 @@ class _MenuCardBigState extends State<MenuCardBig> {
                                   ),
                                 ),
                                 TextButton(
-                                    onPressed: () {},
-                                    child: Container(
-                                      height: 50,
-                                      width: 50,
-                                      color: Colors.green,
-                                    )),
+                                  onPressed: () {
+                                    setState(() {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MainScreen(),
+                                        ),
+                                      );
+                                    });
+                                  },
+                                  child: SizedBox(
+                                    height: 279,
+                                    width: 120,
+                                    child: GlowingTextBtn(
+                                      btnText: 'Add to order',
+                                      colorOutlineLight:
+                                          Palette.button2OutlineLight,
+                                      colorOutlineDark:
+                                          Palette.button2OutlineDark,
+                                      colorGradientLight:
+                                          Palette.button2GradientPurple,
+                                      colorGradientDark:
+                                          Palette.button2GradientPink,
+                                      fontSizeData: 13,
+                                    ),
+                                  ),
+                                )
                               ]),
                         ],
                       ),

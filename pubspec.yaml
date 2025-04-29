@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   shimmer: ^3.0.0
+  flutter_glow: ^0.3.2
+
 
 dev_dependencies:
   flutter_test:
