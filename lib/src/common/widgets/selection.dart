@@ -12,7 +12,7 @@ class Selection extends StatelessWidget {
         height: 238,
         child: ListView.builder(
           shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
+          scrollDirection: Axis.vertical,
           padding: EdgeInsets.all(8),
           itemCount: itemsData.length,
           itemBuilder: (BuildContext buildCards, int index) {
@@ -21,7 +21,9 @@ class Selection extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
                   onTap: () {},
-                  child: MenuCardBig(),
+                  child: MenuCardBig(
+                    menuItem: itemsData[index],
+                  ),
                 ),
               );
             }

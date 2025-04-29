@@ -17,7 +17,7 @@ class StartScreen extends StatelessWidget {
         Scaffold(
           backgroundColor: Palette.transparent,
           body: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 48, 16, 0),
+            padding: const EdgeInsets.fromLTRB(16, 48, 16, 80),
             child: OrderNowWindow(),
           ),
         ),

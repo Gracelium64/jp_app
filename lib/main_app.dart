@@ -17,8 +17,8 @@ class MainApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: ThemeMode.dark,
-        // home: StartScreen(),
-        home: MenuCardBig()
+        home: StartScreen(),
+        // home: MenuCardBig(menuItem2: itemsData[0])
         // home: MainScreen(),
         // home: Vorlesung(),
         );

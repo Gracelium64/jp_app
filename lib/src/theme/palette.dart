@@ -26,11 +26,11 @@ abstract class Palette {
   static final Color buttonOutlineLight =
       const Color.fromARGB(255, 250, 180, 205);
   static final Color button2OutlineDark =
-      const Color.fromARGB(255, 165, 90, 245);
+      const Color.fromARGB(255, 200, 135, 235);
   static final Color button2OutlineLight =
       const Color.fromARGB(255, 230, 180, 245);
   static final Color button2GradientPurple =
       const Color.fromARGB(255, 140, 130, 241);
   static final Color button2GradientPink =
-      const Color.fromARGB(255, 222, 150, 255);
+      const Color.fromARGB(255, 240, 150, 219);
 }
