@@ -4,14 +4,15 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.6.2
-  # sdk: ^3.7.2
+  # sdk: ^3.6.2
+  sdk: ^3.7.2
 
 dependencies:
   flutter:
     sdk: flutter
   shimmer: ^3.0.0
   flutter_glow: ^0.3.2
+  audioplayers: ^1.0.1
 
 
 dev_dependencies:
@@ -25,6 +26,7 @@ flutter:
     - assets/bg/
     - assets/details/
     - assets/graphics/
+    - assets/audio/
   fonts:
     - family: Inter
       fonts:
@@ -41,3 +43,4 @@ flutter:
     - family: SFPro
       fonts:
         - asset: assets/fonts/SfProDisplay/SFPRODISPLAYREGULAR.OTF
+        

@@ -36,10 +36,7 @@ class _MenuCardState extends State<MenuCard> {
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32),
-              side: BorderSide(
-                width: 0.5,
-                color: Palette.menuCardBorder,
-              ),
+              side: BorderSide(width: 0.5, color: Palette.menuCardBorder),
             ),
           ),
           child: Padding(
@@ -47,12 +44,13 @@ class _MenuCardState extends State<MenuCard> {
             child: Column(
               children: [
                 Container(
-                  height: 155, 
-                  width: 155, 
+                  height: 155,
+                  width: 155,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(widget.menuItem.imgPath))
-                  )
+                      image: AssetImage(widget.menuItem.imgPath),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),

@@ -1,5 +1,5 @@
+// import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
 import 'package:jp_app/src/theme/palette.dart';
 
 class GlowingTextBtn extends StatefulWidget {
@@ -9,6 +9,7 @@ class GlowingTextBtn extends StatefulWidget {
   final Color colorGradientLight;
   final Color colorGradientDark;
   final double fontSizeData;
+  final Widget destination;
 
   const GlowingTextBtn({
     super.key,
@@ -18,6 +19,7 @@ class GlowingTextBtn extends StatefulWidget {
     required this.colorGradientLight,
     required this.colorGradientDark,
     required this.fontSizeData,
+    required this.destination,
   });
 
   @override
@@ -30,30 +32,35 @@ class _GlowingTextBtnState extends State<GlowingTextBtn> {
     return Stack(
       children: [
         Container(
-            height: 45,
-            width: 220,
-            decoration: ShapeDecoration(
-                gradient: RadialGradient(
-                  center: Alignment.bottomLeft,
-                  focal: Alignment.topRight,
-                  radius: 5,
-                  colors: [
-                    widget.colorOutlineLight, // outline gradient
-                    widget.colorOutlineDark,
-                  ],
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                shadows: [
-                  BoxShadow(
-                    blurStyle: BlurStyle.normal,
-                    color: widget.colorOutlineDark, //////////////
-                    blurRadius: 20, // glow effevt
-                    offset: Offset(3, 4),
-                    spreadRadius: 5,
-                  )
-                ])),
+          height: 45,
+          width: 220,
+          decoration: ShapeDecoration(
+            gradient: RadialGradient(
+              center: Alignment.bottomLeft,
+              focal: Alignment.topRight,
+              radius: 5,
+              colors: [
+                widget.colorOutlineLight, // outline gradient
+                widget.colorOutlineDark,
+              ],
+            ),
+
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+
+            shadows: [
+              BoxShadow(
+                blurStyle: BlurStyle.normal,
+
+                color: widget.colorOutlineDark, //////////////
+                blurRadius: 20, // glow effect
+                offset: Offset(3, 4),
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+        ),
         Opacity(
           opacity: 1,
           child: Container(
@@ -84,10 +91,16 @@ class _GlowingTextBtnState extends State<GlowingTextBtn> {
           width: 230,
           child: TextButton(
             onPressed: () {
+              // AudioPlayer().play(AssetSource('assets/audio/apple_pay.mp3'));
               setState(() {
+                // ignore: avoid_print
+                print('https://youtu.be/dQw4w9WgXcQ?si=xwyuywS1wchsoSMx');
+
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const MainScreen(),
+                    builder: (context) {
+                      return widget.destination;
+                    },
                   ),
                 );
               });

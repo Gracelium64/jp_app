@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/common/widgets/app_bg.dart';
-import 'package:jp_app/src/common/widgets/recommended.dart';
-import 'package:jp_app/src/common/widgets/selection.dart';
-import 'package:jp_app/src/features/navigation/domain/menu_card_big.dart';
+import 'package:jp_app/src/features/navigation/domain/recommended.dart';
+import 'package:jp_app/src/features/navigation/domain/selection.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -18,14 +16,48 @@ class MainScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           body: Padding(
             padding: const EdgeInsets.fromLTRB(16, 48, 16, 0),
-            child: Column(children: [
-              Selection(),
-              MenuCardBig(menuItem: itemsData[3]),
-              Recommended(),
-            ]),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 32, 0),
+                  child: Text(
+                    'Choose Your Favorite Snack',
+                    style: TextStyle(
+                      fontFamily: 'InterBlack',
+                      fontWeight: FontWeight.w900,
+                      height: 1.27,
+                      letterSpacing: 1,
+                      fontSize: 22,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 64, child: Placeholder()),
+                Selection(catagory: 'Salty'), /////////////////////////////
+                Row(
+                  children: [
+                    Text(
+                      'We Recommend',
+                      style: TextStyle(
+                        fontFamily: 'InterBlack',
+                        fontWeight: FontWeight.w900,
+                        height: 1.27,
+                        letterSpacing: 1,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+                Recommended(
+                  catagory: 'Sweet',
+                ), //////////////////////////////////
+              ],
+            ),
           ),
         ),
       ],
     );
   }
 }
+
+          
