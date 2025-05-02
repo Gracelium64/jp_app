@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
-import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
-import 'package:jp_app/src/features/navigation/presentation/start_screen.dart';
-import 'package:jp_app/src/theme/app_theme.dart';
+import 'package:jp_app/Src/common/items_data.dart';
+import 'package:jp_app/Src/features/navigation/presentation/details_screen.dart';
+import 'package:jp_app/Src/features/navigation/presentation/main_screen.dart';
+import 'package:jp_app/Src/features/navigation/presentation/start_screen.dart';
+import 'package:jp_app/Src/theme/app_theme.dart';
 import 'package:jp_app/vorlesung.dart';
 
 class MainApp extends StatelessWidget {

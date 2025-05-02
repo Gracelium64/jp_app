@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/common/widgets/glowing_text_btn2.dart';
-import 'package:jp_app/src/theme/palette.dart';
-import 'package:jp_app/src/theme/symbols_palette.dart';
+import 'package:jp_app/Src/common/items_data.dart';
+import 'package:jp_app/Src/common/widgets/glowing_text_btn2.dart';
+import 'package:jp_app/Src/theme/palette.dart';
+import 'package:jp_app/Src/theme/symbols_palette.dart';
 
 class MenuCardBig extends StatefulWidget {
   final MenuItem menuItem;

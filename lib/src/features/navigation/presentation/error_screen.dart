@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/widgets/glowing_text_btn.dart';
-import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
-import 'package:jp_app/src/theme/palette.dart';
+import 'package:jp_app/Src/common/widgets/glowing_text_btn.dart';
+import 'package:jp_app/Src/features/navigation/presentation/main_screen.dart';
+import 'package:jp_app/Src/theme/palette.dart';
 
 class ErrorScreen extends StatelessWidget {
   const ErrorScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/widgets/app_bg.dart';
-import 'package:jp_app/src/features/navigation/domain/order_now_window.dart';
-import 'package:jp_app/src/features/navigation/domain/cup_cake_bg.dart';
-import 'package:jp_app/src/theme/palette.dart';
+import 'package:jp_app/Src/common/widgets/app_bg.dart';
+import 'package:jp_app/Src/features/navigation/domain/order_now_window.dart';
+import 'package:jp_app/Src/features/navigation/domain/cup_cake_bg.dart';
+import 'package:jp_app/Src/theme/palette.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});

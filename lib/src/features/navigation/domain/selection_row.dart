@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/navigation/domain/variables.dart';
-import 'package:jp_app/src/theme/palette.dart';
+import 'package:jp_app/Src/features/navigation/domain/variables.dart';
+import 'package:jp_app/Src/theme/palette.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class SelectionRow extends StatefulWidget {

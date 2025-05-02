@@ -1,13 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/common/widgets/glowing_text_btn.dart';
-import 'package:jp_app/src/common/widgets/star_rating.dart';
-import 'package:jp_app/src/features/navigation/domain/ingredients.dart';
-import 'package:jp_app/src/features/navigation/presentation/error_screen.dart';
-import 'package:jp_app/src/theme/palette.dart';
-import 'package:jp_app/src/theme/symbols_palette.dart';
+import 'package:jp_app/Src/common/items_data.dart';
+import 'package:jp_app/Src/common/widgets/glowing_text_btn.dart';
+import 'package:jp_app/Src/common/widgets/star_rating.dart';
+import 'package:jp_app/Src/features/navigation/domain/ingredients.dart';
+import 'package:jp_app/Src/features/navigation/presentation/error_screen.dart';
+import 'package:jp_app/Src/theme/palette.dart';
+import 'package:jp_app/Src/theme/symbols_palette.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DetailsScreen extends StatefulWidget {
