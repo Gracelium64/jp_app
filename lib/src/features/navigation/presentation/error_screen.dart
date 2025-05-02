@@ -18,6 +18,8 @@ class ErrorScreen extends StatelessWidget {
           colorGradientDark: Palette.buttonGradientPink,
           fontSizeData: 18,
           destination: MainScreen(),
+          width1: 220,
+          width2: 230,
         ),
       ),
     );

@@ -1,7 +1,6 @@
 // import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/common/items_data.dart';
-import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
+
 import 'package:jp_app/src/theme/palette.dart';
 
 class GlowingTextBtn2 extends StatefulWidget {

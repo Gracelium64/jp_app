@@ -10,6 +10,8 @@ class GlowingTextBtn extends StatefulWidget {
   final Color colorGradientDark;
   final double fontSizeData;
   final Widget destination;
+  final double width1;
+  final double width2;
 
   const GlowingTextBtn({
     super.key,
@@ -20,6 +22,8 @@ class GlowingTextBtn extends StatefulWidget {
     required this.colorGradientDark,
     required this.fontSizeData,
     required this.destination,
+    required this.width1,
+    required this.width2,
   });
 
   @override
@@ -33,7 +37,7 @@ class _GlowingTextBtnState extends State<GlowingTextBtn> {
       children: [
         Container(
           height: 45,
-          width: 220,
+          width: widget.width1,
           decoration: ShapeDecoration(
             gradient: RadialGradient(
               center: Alignment.bottomLeft,
@@ -65,7 +69,7 @@ class _GlowingTextBtnState extends State<GlowingTextBtn> {
           opacity: 1,
           child: Container(
             height: 50,
-            width: 230,
+            width: widget.width1,
             decoration: ShapeDecoration(
               gradient: RadialGradient(
                 center: Alignment.bottomRight,
@@ -88,7 +92,7 @@ class _GlowingTextBtnState extends State<GlowingTextBtn> {
             ),
           ),
           height: 50,
-          width: 230,
+          width: widget.width2,
           child: TextButton(
             onPressed: () {
               // AudioPlayer().play(AssetSource('assets/audio/apple_pay.mp3'));

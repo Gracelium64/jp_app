@@ -14,9 +14,11 @@ class OrderNowWindow extends StatefulWidget {
 class _OrderNowWindowState extends State<OrderNowWindow> {
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-      Expanded(flex: 5, child: Container(height: 50)),
-      ClipRRect(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Expanded(flex: 5, child: Container(height: 50)),
+        ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(35)),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
@@ -30,73 +32,80 @@ class _OrderNowWindowState extends State<OrderNowWindow> {
                   borderRadius: BorderRadius.circular(35),
                 ),
               ),
-              child: Column(children: [
-                Text(
-                  'Feeling Snackish Today?',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Palette.textWhite,
-                    fontSize: 24,
-                    fontFamily: 'InterBlack',
-                    fontWeight: FontWeight.w900,
-                    height: 1.3,
-                    letterSpacing: 0.2,
-                    /////////////////////////////////////
-                    shadows: [
-                      Shadow(
-                        offset: Offset(0, 30),
-                        blurRadius: 180,
-                        color: Palette.black,
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(25.4, 8, 25.4, 0),
-                  child: Text(
-                    "Explore Angi's most popular snack selection and get instantly happy.",
+              child: Column(
+                children: [
+                  Text(
+                    'Feeling Snackish Today?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Palette.textGrey,
-                      fontFamily: 'SFPro',
-                      fontWeight: FontWeight.w400,
+                      color: Palette.textWhite,
+                      fontSize: 24,
+                      fontFamily: 'InterBlack',
+                      fontWeight: FontWeight.w900,
                       height: 1.3,
-                      letterSpacing: 1,
+                      letterSpacing: 0.2,
+                      /////////////////////////////////////
                       shadows: [
                         Shadow(
                           offset: Offset(0, 30),
                           blurRadius: 180,
-                          color: Color(0xFF000000),
+                          color: Palette.black,
                         ),
                       ],
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 35, 0, 35),
-                  //
-                  //
-                  //
-                  //
-                  //
-                  //
-                  child: GlowingTextBtn(
-                    btnText: 'Order Now',
-                    colorOutlineLight: Palette.buttonOutlineLight,
-                    colorOutlineDark: Palette.buttonOutlineDark,
-                    colorGradientLight: Palette.buttonGradientOrange,
-                    colorGradientDark: Palette.buttonGradientPink,
-                    fontSizeData: 18, destination: MainScreen(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25.4, 8, 25.4, 0),
+                    child: Text(
+                      "Explore Angi's most popular snack selection and get instantly happy.",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Palette.textGrey,
+                        fontFamily: 'SFPro',
+                        fontWeight: FontWeight.w400,
+                        height: 1.3,
+                        letterSpacing: 1,
+                        shadows: [
+                          Shadow(
+                            offset: Offset(0, 30),
+                            blurRadius: 180,
+                            color: Color(0xFF000000),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-              ]),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 35, 0, 35),
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    child: GlowingTextBtn(
+                      btnText: 'Order Now',
+                      colorOutlineLight: Palette.buttonOutlineLight,
+                      colorOutlineDark: Palette.buttonOutlineDark,
+                      colorGradientLight: Palette.buttonGradientOrange,
+                      colorGradientDark: Palette.buttonGradientPink,
+                      fontSizeData: 18,
+                      destination: MainScreen(),
+                      width1: 220,
+                      width2: 230,
+                    ),
+                  ),
+                ],
+              ),
               //
               //
               //
               //
               //
             ),
-          ))
-    ]);
+          ),
+        ),
+      ],
+    );
   }
 }

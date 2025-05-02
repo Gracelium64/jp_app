@@ -1,13 +1,11 @@
-import 'dart:ui';
 import 'package:jp_app/src/features/navigation/domain/variables.dart';
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/widgets/app_bg.dart';
 import 'package:jp_app/src/features/navigation/domain/recommended.dart';
 import 'package:jp_app/src/features/navigation/domain/selection.dart';
 import 'package:jp_app/src/features/navigation/domain/selection_row.dart';
-import 'package:jp_app/src/theme/palette.dart';
-// import 'package:material_design_icons_flutter/icon_map.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

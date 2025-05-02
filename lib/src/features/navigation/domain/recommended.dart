@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/features/navigation/domain/menu_card.dart';
 import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
+import 'package:jp_app/src/theme/palette.dart';
 
 class Recommended extends StatelessWidget {
   final String catagory;
@@ -25,7 +26,19 @@ class Recommended extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Palette.transparent,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                          height: 800,
+                          child: DetailsScreen(menuItem: itemsData[index]),
+                        );
+                      },
+                    );
+                  },
                   child: MenuCard(menuItem: itemsData[index]),
                 ),
               );
@@ -33,7 +46,19 @@ class Recommended extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Palette.transparent,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                          height: 800,
+                          child: DetailsScreen(menuItem: itemsData[index]),
+                        );
+                      },
+                    );
+                  },
                   child: MenuCard(menuItem: itemsData[index]),
                 ),
               );

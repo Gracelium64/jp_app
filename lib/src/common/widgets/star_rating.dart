@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/theme/palette.dart';
 
 class StarRating extends StatelessWidget {
   final double rating;
+  final Color ratingColor;
 
-  const StarRating({super.key, required this.rating});
+  const StarRating({
+    super.key,
+    required this.rating,
+    required this.ratingColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,26 +23,11 @@ class StarRating extends StatelessWidget {
     if (rating > 4.5 && rating < 5) {
       return Row(
         children: [
-          Icon(
-            Icons.star,
-            color: Palette.starColor,
-          ),
-          Icon(
-            Icons.star,
-            color: Palette.starColor,
-          ),
-          Icon(
-            Icons.star,
-            color: Palette.starColor,
-          ),
-          Icon(
-            Icons.star,
-            color: Palette.starColor,
-          ),
-          Icon(
-            Icons.star_half_outlined,
-            color: Palette.starColor,
-          ),
+          Icon(Icons.star, color: ratingColor),
+          Icon(Icons.star, color: ratingColor),
+          Icon(Icons.star, color: ratingColor),
+          Icon(Icons.star, color: ratingColor),
+          Icon(Icons.star_half_outlined, color: ratingColor),
         ],
       );
     }
@@ -47,20 +36,14 @@ class StarRating extends StatelessWidget {
     final int numberOfEmptyStars = 5 - correctedRating;
 
     List<Icon> fullStars = List.filled(
-        numberOfFullStars,
-        Icon(
-          Icons.star,
-          color: Palette.starColor,
-        ));
-    List<Icon> emptyStars = List.filled(
-        numberOfEmptyStars,
-        Icon(
-          Icons.star_border_outlined,
-          color: Palette.starColor,
-        ));
-
-    return Row(
-      children: [...fullStars, ...emptyStars],
+      numberOfFullStars,
+      Icon(Icons.star, color: ratingColor),
     );
+    List<Icon> emptyStars = List.filled(
+      numberOfEmptyStars,
+      Icon(Icons.star_border_outlined, color: ratingColor),
+    );
+
+    return Row(children: [...fullStars, ...emptyStars]);
   }
 }
