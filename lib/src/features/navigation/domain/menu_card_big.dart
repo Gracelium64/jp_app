@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/common/widgets/glowing_text_btn.dart';
+import 'package:jp_app/src/common/widgets/glowing_text_btn2.dart';
+import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
 import 'package:jp_app/src/features/navigation/presentation/start_screen.dart';
 import 'package:jp_app/src/theme/palette.dart';
 import 'package:jp_app/src/theme/symbols_palette.dart';
@@ -19,7 +21,6 @@ class _MenuCardBigState extends State<MenuCardBig> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      
       borderRadius: BorderRadius.all(Radius.circular(35)),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
@@ -28,11 +29,7 @@ class _MenuCardBigState extends State<MenuCardBig> {
             SizedBox(
               width: 400,
               height: 238,
-              child: Image.asset(
-                'assets/details/Vector.png',
-                fit: BoxFit.fill,
-                color: Color.fromARGB(255, 49, 46, 37),
-              ),
+              child: Image.asset('assets/details/Vector.png', fit: BoxFit.fill),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -128,14 +125,14 @@ class _MenuCardBigState extends State<MenuCardBig> {
                   child: SizedBox(
                     // height: 279,
                     width: 120,
-                    child: GlowingTextBtn(
+                    child: GlowingTextBtn2(
                       btnText: 'Add to order',
                       colorOutlineLight: Palette.button2OutlineLight, //button
                       colorOutlineDark: Palette.button2OutlineDark,
                       colorGradientLight: Palette.button2GradientPurple,
                       colorGradientDark: Palette.button2GradientPink,
                       fontSizeData: 13,
-                      destination: StartScreen(),
+                      // destination: DetailsScreen(menuItem: menuItem,),
                     ),
                   ),
                 ),

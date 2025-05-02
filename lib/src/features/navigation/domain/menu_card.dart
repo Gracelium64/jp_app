@@ -1,3 +1,4 @@
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'dart:ui';
 import 'package:jp_app/src/common/items_data.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +83,7 @@ class _MenuCardState extends State<MenuCard> {
                           Text(SymbolsPalette.miaoCoin),
                           Text('${widget.menuItem.itemPriceL}'),
                           Spacer(),
-                          Text('#'),
+                          Icon((MdiIcons.cardsHeartOutline), size: 17),
                           Text('${widget.menuItem.itemLikes}'),
                         ],
                       ),

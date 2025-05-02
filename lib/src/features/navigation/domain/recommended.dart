@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/features/navigation/domain/menu_card.dart';
+import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
 
 class Recommended extends StatelessWidget {
   final String catagory;

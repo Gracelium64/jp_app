@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
 import 'package:jp_app/src/features/navigation/presentation/main_screen.dart';
 import 'package:jp_app/src/features/navigation/presentation/start_screen.dart';
 import 'package:jp_app/src/theme/app_theme.dart';
@@ -15,7 +16,8 @@ class MainApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
       // home: StartScreen(),
-      home: MainScreen(),
+      // home: MainScreen(),
+      home: DetailsScreen(),
       // home: Vorlesung(),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/common/items_data.dart';
 import 'package:jp_app/src/features/navigation/domain/menu_card_big.dart';
+import 'package:jp_app/src/features/navigation/presentation/details_screen.dart';
 
 class Selection extends StatelessWidget {
   final String catagory;
@@ -23,7 +24,15 @@ class Selection extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return DetailsScreen();
+                        },
+                      ),
+                    );
+                  },
                   child: SizedBox(
                     height: 238,
                     width: 345,
@@ -35,7 +44,14 @@ class Selection extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(height: 1800, child: DetailsScreen());
+                      },
+                    );
+                  },
                   child: SizedBox(
                     height: 238,
                     width: 345,
